@@ -1,0 +1,448 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+h1 {
+    font-family: 'Didot', serif;
+    font-size: 3em;
+    margin: 0;
+    color: #AF866A;
+}
+
+header {
+    background-color: #FFF0F5;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+}
+
+header img {
+    width: 250px;
+    height: auto;
+    position: absolute;
+    left: 45px;
+    top: 3px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+    font-family: 'Didot', serif;
+}
+
+nav ul li a {
+    color: #AF866A;
+    text-decoration: none;
+    font-family: 'Didot', serif;
+}
+
+
+
+section {
+    padding: 20px;
+}
+
+/* Estilos adicionales para la sección de Inicio */
+#inicio {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+.intro-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.intro-text {
+    width: 50%;
+    text-align: left;
+}
+
+.intro-text p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #555;
+}
+
+.intro-text p:first-child {
+    font-weight: bold;
+    color: #AF866A; /* Color principal para destacar */
+}
+
+.intro-text p:last-child {
+    margin-bottom: 0;
+}
+
+#inicio img, #sobre-nosotros img {
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+    margin-left: 30px;
+    transition: transform 0.3s ease; /* Transición suave al hacer hover */
+}
+
+#inicio img:hover, #sobre-nosotros img:hover {
+    transform: scale(1.03); /* Escala ligeramente al hacer hover */
+}
+
+.section-title {
+    font-family: 'Didot', serif;
+    color: #AF866A; /* Color destacado */
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80%;
+    height: 2px;
+    background-color: #AF866A;
+    margin: 20px auto 0;
+}
+
+/* Estilos para la sección "Productos" */
+.productos-section {
+    background-color: #fff;
+    padding: 20px;
+}
+
+.productos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    overflow-x: hidden;
+}
+
+.productos-container > section {
+    flex: 1 0 auto;
+    margin: 0;
+    max-width: 20%;
+}
+
+.productos-container > section h3 {
+    text-align: center;
+    color: #AF866A; /* Color destacado */
+    margin-bottom: 10px;
+}
+
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.producto {
+    width: 250px; /* Ancho fijo para cada producto */
+    height: 250px; /* Altura fija para cada producto */
+    overflow: hidden; /* Ocultar cualquier desbordamiento de imagen */
+    margin-bottom: 20px; /* Espacio entre productos */
+    border-radius: 10px; /* Bordes redondeados para un aspecto estilizado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease; /* Transición suave al hacer hover */
+    position: relative; /* Ajuste necesario para posicionamiento */
+    display: flex; /* Utilizamos flexbox */
+    justify-content: center; /* Centramos horizontalmente */
+    align-items: center; /* Centramos verticalmente */
+}
+
+.producto img {
+    width: 250px; /* Ancho fijo para cada imagen de producto */
+    height: 250px; /* Altura fija para cada imagen de producto */
+    object-fit: cover; /* Cubrir el contenedor manteniendo la relación de aspecto */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease; /* Transición suave al hacer hover */
+}
+
+.producto:hover {
+    transform: translateY(-5px); /* Efecto de elevación al hacer hover */
+}
+
+.producto .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+    opacity: 0;
+    text-align: center;
+}
+
+.producto:hover .overlay {
+    opacity: 1; /* Mostrar overlay al hacer hover */
+}
+
+.producto .overlay h4 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.producto .overlay p {
+    margin: 5px 0 0;
+    font-size: 0.9em;
+}
+
+#productos h2 {
+    font-family: 'Didot', serif;
+    text-transform: uppercase;
+    text-align: center;
+    color: #AF866A;
+    margin-top: 20px;
+    position: relative; /* Asegura que la línea se posicione correctamente */
+}
+
+#productos h2::after {
+    content: '';
+    display: block;
+    width: 80%; /* Ancho de la línea */
+    height: 2px; /* Grosor de la línea */
+    background-color: #AF866A; /* Color de la línea */
+    margin: 10px auto 0; /* Espaciado de la línea */
+}
+
+#productos h2, #productos h3 {
+    text-align: center;
+    color: #AF866A; /* Color destacado */
+    margin-top: 20px; /* Espacio superior */
+}
+
+#productos h3 {
+    font-family: 'Didot', serif;
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+#sobre-nosotros {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+.intro-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.intro-container.reverse {
+    flex-direction: row-reverse; /* Invierte la dirección de los elementos */
+}
+
+.intro-text {
+    width: 50%;
+    text-align: left;
+}
+
+.intro-text p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #555; /* Color uniforme para todo el texto */
+    font-weight: normal;
+    margin-bottom: 20px; /* Espacio adicional entre párrafos */
+}
+
+#sobre-nosotros img {
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-right: 30px; /* Ajuste para el margen derecho */
+    transition: transform 0.3s ease;
+    margin-left: 0px; /* Ajuste para mover la imagen hacia la izquierda */
+}
+
+#sobre-nosotros img:hover {
+    transform: scale(1.02);
+}
+
+/* Estilos generales para el footer */
+footer {
+    background-color: #FFF0F5; /* Color de fondo */
+    padding: 20px 0; /* Espaciado interno */
+    color: #AF866A; /* Color del texto */
+    font-size: 14px; /* Tamaño de fuente */
+    position: relative; /* Posición relativa para alinear footer-top */
+}
+
+.container {
+    max-width: 1400px; /* Ancho máximo del contenido del footer */
+    margin: 0 auto; /* Centrar el contenido */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center; /* Alinear elementos verticalmente al centro */
+}
+
+.logo {
+    display: flex; /* Utilizar flexbox para alinear el logo */
+    align-items: center; 
+    margin-bottom: 20px; 
+}
+
+.logo img {
+    max-width: 300px; /* Ancho máximo del logo */
+    height: auto; /* Altura automática para mantener la proporción */
+    margin-right: 10px; /* Espacio entre el logo y la información de contacto */
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    margin-left: 0; /* Ajustar o eliminar el margen izquierdo */
+    margin-right: 300px; /* Agregar margen derecho para separación */
+}
+
+/* Estilos para la sección de contacto y horario */
+#contacto{
+    margin-bottom: 20px; /* Espacio inferior entre secciones */
+}
+
+#horario{
+    margin-top: -35px;
+    margin-bottom: 20px;
+}
+
+#horario p {
+    margin: 5px 0; /* Espaciado interno de los párrafos en la sección de horario */
+}
+
+/* Estilos para la parte superior del footer */
+.footer-top {
+    position: absolute; /* Posición absoluta para alinear arriba del footer */
+    top: 20px; /* Ajuste el valor según sea necesario */
+    right: 20px; /* Ajuste el valor según sea necesario */
+}
+
+.footer-nav ul {
+    list-style-type: none; /* Quitar viñetas de la lista */
+    padding: 0; /* Quitar padding */
+}
+
+.footer-nav ul li {
+    display: inline-block; /* Mostrar en línea los elementos de la lista */
+    margin-right: 10px; /* Espacio entre elementos */
+}
+
+.footer-nav ul li a {
+    text-decoration: none; /* Quitar subrayado del enlace */
+    color: #AF866A; /* Color del texto del enlace */
+}
+
+.footer-nav ul li a:hover {
+    color: #AF866A; /* Color del texto del enlace al pasar el mouse */
+}
+
+/* Estilos para el texto de derechos de autor */
+.footer-content {
+    text-align: center; /* Centrar el texto */
+    margin-top: 20px; /* Espaciado superior */
+}
+
+.copyright {
+    font-size: 12px; /* Tamaño de fuente más pequeño para derechos de autor */
+    color: #AF866A; /* Color de texto más claro */
+}
+
+.back-to-top {
+    position: fixed; /* Fija el botón en la pantalla */
+    bottom: 20px; /* Distancia desde el borde inferior */
+    right: 20px; /* Distancia desde el borde derecho */
+    width: 50px; /* Ancho de la imagen */
+    height: 50px; /* Altura de la imagen */
+}
+
+.back-to-top img {
+    width: 100%; /* Ajusta el tamaño de la imagen al contenedor */
+    height: 100%; /* Ajusta el tamaño de la imagen al contenedor */
+    border-radius: 50%; /* Bordes redondeados para hacer un círculo */
+    transition: transform 0.3s ease; /* Efecto de transición */
+}
+
+.back-to-top img:hover {
+    transform: scale(1.1); /* Efecto de escala al pasar el mouse */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icons a {
+    margin: 0 10px; /* Espacio entre los íconos */
+}
+
+.social-icons img {
+    width: 40px; /* Ancho deseado de los íconos */
+    height: auto; /* Altura automática para mantener la proporción */
+    transition: transform 0.3s ease; /* Efecto de transición */
+}
+
+.social-icons img:hover {
+    transform: scale(1.1); /* Efecto de escala al pasar el mouse */
+}
+
+
+@media (max-width: 768px) {
+    .productos-container > section {
+        flex: 1 0 100%; /* Ajusta el ancho de las secciones de productos al 100% */
+        margin-bottom: 10px; /* Espaciado inferior entre secciones de productos */
+        max-width: 100%; /* Ajusta el ancho máximo de las secciones de productos al 100% */
+    }
+
+    .intro-container {
+        flex-direction: column; /* Cambia la dirección del contenido a columna */
+    }
+
+    .intro-text, #sobre-nosotros img {
+        width: 100%; /* Ajusta el ancho completo en dispositivos móviles */
+        margin: 0; /* Elimina el margen para un diseño más ajustado */
+        text-align: center; /* Alinea el texto al centro */
+    }
+
+    .intro-text p {
+        margin-bottom: 10px; /* Espaciado reducido entre párrafos */
+    }
+
+    /* Estilos específicos para el footer en dispositivos móviles */
+    footer .container {
+        flex-direction: column; /* Cambia la dirección a columna */
+        align-items: center; /* Centra los elementos horizontalmente */
+        text-align: center; /* Alinea el texto al centro */
+    }
+
+    footer .contact-info {
+        margin-right: 0; /* Elimina el margen derecho en información de contacto */
+        margin-left: 0; /* Elimina el margen izquierdo en información de contacto */
+    }
+
+    footer .footer-nav ul li {
+        display: block; /* Muestra los elementos de lista como bloques */
+        margin-bottom: 10px; /* Espaciado inferior entre elementos de lista */
+    }
+}
